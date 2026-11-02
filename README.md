@@ -59,24 +59,6 @@ The user-mentioned "Retinal Fundus Image 50K" was identified as the community da
 Task Incompatibility: It is structured into 7 disease classes (Cataract, Diabetic Retinopathy, Glaucoma, Hypertensive Retinopathy, Myopia, AMD, Normal Fundus), rather than 5-level diabetic retinopathy severity grading.
 Provenance & Leakage Risk: It compiles images from multiple public datasets without patient identifiers, introducing severe risks of patient-level data leakage between arbitrary train/val/test splits.
 Recommendation: It cannot be dropped into the 5-class DR severity pipeline without re-architecting the classification objective to multi-disease diagnosis.
-💻 Quick Start & Demonstration Dashboard
-1. Environment Setup (Windows PowerShell)
-# Clone the repository
-git clone https://github.com/chakshu-dhannawat/Retinal-Image-Analysis.git
-cd Retinal-Image-Analysis
-
-# Create and activate Python virtual environment
-python -m venv .venv
-.venv\Scripts\Activate.ps1
-
-# Upgrade pip and install pinned dependencies
-python -m pip install --upgrade pip
-python -m pip install -r requirements.txt
-2. Fast System Smoke Test (< 2 seconds)
-Verify that model checkpoints, preprocessing, metric calculation, and live Grad-CAM function properly:
-
-python smoke_test.py
-Expected output:
 
 RETINAL IMAGE ANALYSIS -- FAST SYSTEM SMOKE TEST
 [Check 1/6] Python and PyTorch Environment...          [OK]
