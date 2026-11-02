@@ -1,0 +1,15 @@
+RetinaMNIST Test Set Classification Report
+Model: ResNet50
+======================================================================
+
+              precision    recall  f1-score   support
+
+     Grade 0     0.7085    0.8103    0.7560       174
+     Grade 1     0.3333    0.0435    0.0769        46
+     Grade 2     0.3692    0.5217    0.4324        92
+     Grade 3     0.3846    0.3676    0.3759        68
+     Grade 4     0.0000    0.0000    0.0000        20
+
+    accuracy                         0.5400       400
+   macro avg     0.3591    0.3486    0.3283       400
+weighted avg     0.4969    0.5400    0.5011       400

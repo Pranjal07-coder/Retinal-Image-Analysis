@@ -1,0 +1,44 @@
+# Baseline classification configuration for retinal disease detection
+
+# Dataset configuration
+dataset:
+  name: "medmnist/retinamnist"  # HuggingFace dataset
+  subset: null
+  num_classes: 5
+
+# Model configuration
+backbone: "resnet50"  # Options: vgg16, resnet50, densenet121, vit_base, swin_tiny
+pretrained: true
+num_classes: 5
+
+# Training hyperparameters
+epochs: 10
+batch_size: 16
+learning_rate: 0.0001
+weight_decay: 0.0001
+image_size: 224
+
+# Data augmentation
+augmentation:
+  enabled: true
+  horizontal_flip: 0.5
+  vertical_flip: 0.5
+  rotation: 30
+
+# Self-supervised pretraining (optional)
+self_supervised:
+  enabled: false
+  method: "simclr"  # Options: simclr, byol
+  pretrain_epochs: 100
+  temperature: 0.5
+
+# Experiment tracking
+wandb:
+  enabled: false
+  project: "retinal-disease-detection"
+  entity: null
+
+# Paths
+data_dir: "./data/hf-cache"
+results_dir: "./results"
+checkpoint_dir: "./results/checkpoints"

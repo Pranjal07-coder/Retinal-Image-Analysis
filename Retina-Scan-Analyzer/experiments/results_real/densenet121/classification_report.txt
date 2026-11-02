@@ -1,0 +1,15 @@
+RetinaMNIST Test Set Classification Report
+Model: DenseNet121
+======================================================================
+
+              precision    recall  f1-score   support
+
+     Grade 0     0.6635    0.7931    0.7225       174
+     Grade 1     0.2632    0.1087    0.1538        46
+     Grade 2     0.3846    0.3804    0.3825        92
+     Grade 3     0.4154    0.3971    0.4060        68
+     Grade 4     0.2941    0.2500    0.2703        20
+
+    accuracy                         0.5250       400
+   macro avg     0.4041    0.3859    0.3870       400
+weighted avg     0.4927    0.5250    0.5025       400
